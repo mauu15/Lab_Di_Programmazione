@@ -392,3 +392,38 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/anaconda3/lib/cmake/GTest/GTestConfig.cmake:29 (find_dependency)"
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindGTest.cmake:194 (find_package)"
+      - "tests/CMakeLists.txt:2 (find_package)"
+    directories:
+      source: "/Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i1OMhL"
+      binary: "/Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i1OMhL"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i1OMhL
+        
+        Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja -v cmTC_b02c9 && [1/2] /Library/Developer/CommandLineTools/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_b02c9.dir/src.c.o -MF CMakeFiles/cmTC_b02c9.dir/src.c.o.d -o CMakeFiles/cmTC_b02c9.dir/src.c.o -c /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-i1OMhL/src.c
+        [2/2] : && /Library/Developer/CommandLineTools/usr/bin/cc -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_b02c9.dir/src.c.o -o cmTC_b02c9   && :
+        
+      exitCode: 0
+...
