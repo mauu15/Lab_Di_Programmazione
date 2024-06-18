@@ -1,4 +1,5 @@
 #include "NoteManager.h"
+#include <algorithm>
 
 void NoteManager::addNote(const Note& note) {
     notes.push_back(note);
@@ -17,6 +18,16 @@ Note* NoteManager::findNoteByTitle(const std::string& title) {
         }
     }
     return nullptr;
+}
+
+std::vector<Note> NoteManager::searchNotesByContent(const std::string& content) const {
+    std::vector<Note> results;
+    for (const auto& note : notes) {
+        if (note.getContent().find(content) != std::string::npos) {
+            results.push_back(note);
+        }
+    }
+    return results;
 }
 
 std::vector<Note> NoteManager::getAllNotes() const {

@@ -14,6 +14,7 @@ public:
     void addNote(const Note& note);
     void deleteNoteByTitle(const std::string& title);
     Note* findNoteByTitle(const std::string& title);
+    std::vector<Note> searchNotesByContent(const std::string& content) const;
     std::vector<Note> getAllNotes() const;
 };
 

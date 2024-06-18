@@ -38,3 +38,15 @@ TEST(NoteManagerTest, FindNoteByTitle) {
     EXPECT_EQ(foundNote->getTitle(), "Titolo1");
     EXPECT_EQ(foundNote->getContent(), "Contenuto1");
 }
+
+// Test searchNotesByContent
+TEST(NoteManagerTest, SearchNotesByContent) {
+    NoteManager manager;
+    Note note1("Titolo1", "Questo è il contenuto della prima nota");
+    Note note2("Titolo2", "Questo è un altro contenuto");
+    manager.addNote(note1);
+    manager.addNote(note2);
+
+    auto results = manager.searchNotesByContent("contenuto");
+    ASSERT_EQ(results.size(), 2); // Verifica che ci siano due risultati
+}
