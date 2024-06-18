@@ -1,0 +1,3 @@
+/Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/CMakeFiles/Lab_Di_Programmazione.dir
+/Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/CMakeFiles/rebuild_cache.dir
