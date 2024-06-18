@@ -125,6 +125,12 @@ build src/CMakeFiles/Note.dir/Note.cpp.o: CXX_COMPILER__Note_unscanned_Debug /Us
   OBJECT_DIR = src/CMakeFiles/Note.dir
   OBJECT_FILE_DIR = src/CMakeFiles/Note.dir
 
+build src/CMakeFiles/Note.dir/NoteManager.cpp.o: CXX_COMPILER__Note_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/src/NoteManager.cpp || cmake_object_order_depends_target_Note
+  DEP_FILE = src/CMakeFiles/Note.dir/NoteManager.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = src/CMakeFiles/Note.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/Note.dir
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target Note
@@ -133,7 +139,7 @@ build src/CMakeFiles/Note.dir/Note.cpp.o: CXX_COMPILER__Note_unscanned_Debug /Us
 #############################################
 # Link the static library src/libNote.a
 
-build src/libNote.a: CXX_STATIC_LIBRARY_LINKER__Note_Debug src/CMakeFiles/Note.dir/Note.cpp.o
+build src/libNote.a: CXX_STATIC_LIBRARY_LINKER__Note_Debug src/CMakeFiles/Note.dir/Note.cpp.o src/CMakeFiles/Note.dir/NoteManager.cpp.o
   ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = src/CMakeFiles/Note.dir
@@ -157,6 +163,12 @@ build src/CMakeFiles/Lab_Di_Programmazione.dir/main.cpp.o: CXX_COMPILER__Lab_Di_
   OBJECT_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
   OBJECT_FILE_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
 
+build src/CMakeFiles/Lab_Di_Programmazione.dir/NoteManager.cpp.o: CXX_COMPILER__Lab_Di_Programmazione_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/src/NoteManager.cpp || cmake_object_order_depends_target_Lab_Di_Programmazione
+  DEP_FILE = src/CMakeFiles/Lab_Di_Programmazione.dir/NoteManager.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Lab_Di_Programmazione
@@ -165,7 +177,7 @@ build src/CMakeFiles/Lab_Di_Programmazione.dir/main.cpp.o: CXX_COMPILER__Lab_Di_
 #############################################
 # Link the executable src/Lab_Di_Programmazione
 
-build src/Lab_Di_Programmazione: CXX_EXECUTABLE_LINKER__Lab_Di_Programmazione_Debug src/CMakeFiles/Lab_Di_Programmazione.dir/main.cpp.o | src/libNote.a || src/libNote.a
+build src/Lab_Di_Programmazione: CXX_EXECUTABLE_LINKER__Lab_Di_Programmazione_Debug src/CMakeFiles/Lab_Di_Programmazione.dir/main.cpp.o src/CMakeFiles/Lab_Di_Programmazione.dir/NoteManager.cpp.o | src/libNote.a || src/libNote.a
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
   LINK_LIBRARIES = src/libNote.a
   OBJECT_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
@@ -260,6 +272,13 @@ build tests/CMakeFiles/runUnitTests.dir/test_note.cpp.o: CXX_COMPILER__runUnitTe
   OBJECT_DIR = tests/CMakeFiles/runUnitTests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/runUnitTests.dir
 
+build tests/CMakeFiles/runUnitTests.dir/test_note_manager.cpp.o: CXX_COMPILER__runUnitTests_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/tests/test_note_manager.cpp || cmake_object_order_depends_target_runUnitTests
+  DEP_FILE = tests/CMakeFiles/runUnitTests.dir/test_note_manager.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  INCLUDES = -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = tests/CMakeFiles/runUnitTests.dir
+  OBJECT_FILE_DIR = tests/CMakeFiles/runUnitTests.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target runUnitTests
@@ -268,7 +287,7 @@ build tests/CMakeFiles/runUnitTests.dir/test_note.cpp.o: CXX_COMPILER__runUnitTe
 #############################################
 # Link the executable tests/runUnitTests
 
-build tests/runUnitTests: CXX_EXECUTABLE_LINKER__runUnitTests_Debug tests/CMakeFiles/runUnitTests.dir/test_note.cpp.o | lib/libgtestd.a lib/libgtest_maind.a src/libNote.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a src/libNote.a
+build tests/runUnitTests: CXX_EXECUTABLE_LINKER__runUnitTests_Debug tests/CMakeFiles/runUnitTests.dir/test_note.cpp.o tests/CMakeFiles/runUnitTests.dir/test_note_manager.cpp.o | lib/libgtestd.a lib/libgtest_maind.a src/libNote.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a src/libNote.a
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
   LINK_LIBRARIES = lib/libgtestd.a  lib/libgtest_maind.a  -lpthread  src/libNote.a  lib/libgtestd.a
   OBJECT_DIR = tests/CMakeFiles/runUnitTests.dir
