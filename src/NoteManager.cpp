@@ -5,10 +5,17 @@ void NoteManager::addNote(const Note& note) {
     notes.push_back(note);
 }
 
-void NoteManager::deleteNoteByTitle(const std::string& title) {
-    notes.erase(std::remove_if(notes.begin(), notes.end(), [&title](const Note& note) {
-        return note.getTitle() == title;
-    }), notes.end());
+bool NoteManager::deleteNoteByTitle(const std::string &title) {
+    for (auto it = notes.begin(); it != notes.end(); ++it) {
+        if (it->getTitle() == title) {
+            if (it->getIsLocked()) {
+                return false; // Non cancella la nota se è bloccata
+            }
+            notes.erase(it);
+            return true;
+        }
+    }
+    return false;
 }
 
 Note* NoteManager::findNoteByTitle(const std::string& title) {
@@ -32,4 +39,28 @@ std::vector<Note> NoteManager::searchNotesByContent(const std::string& content) 
 
 std::vector<Note> NoteManager::getAllNotes() const {
     return notes;
+}
+
+std::vector<Note> NoteManager::getFavoriteNotes() const {
+    std::vector<Note> favorites;
+    for (const auto& note : notes) {
+        if (note.getIsFavorite()) {
+            favorites.push_back(note);
+        }
+    }
+    return favorites;
+}
+
+void NoteManager::setFavorite(const std::string& title, bool isFavorite) {
+    Note* note = findNoteByTitle(title);
+    if (note) {
+        note->setIsFavorite(isFavorite);
+    }
+}
+
+void NoteManager::setLocked(const std::string& title, bool isLocked) {
+    Note* note = findNoteByTitle(title);
+    if (note) {
+        note->setIsLocked(isLocked);
+    }
 }

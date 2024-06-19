@@ -1,8 +1,10 @@
 #include "Note.h"
 
-Note::Note() : title(""), content("") {}
+#include <utility>
 
-Note::Note(const std::string &title, const std::string &content) : title(title), content(content) {}
+Note::Note(std::string  title, std::string  content)
+        : title(std::move(title)), content(std::move(content)), isFavorite(false), isLocked(false) {}
+
 
 std::string Note::getTitle() const {
     return title;
@@ -19,4 +21,20 @@ void Note::setTitle(const std::string &title) {
 void Note::setContent(const std::string &content) {
     this->content = content;
 }
-#include "Note.h"
+
+
+bool Note::getIsFavorite() const {
+    return isFavorite;
+}
+
+void Note::setIsFavorite(bool isFavorite) {
+    this->isFavorite = isFavorite;
+}
+
+bool Note::getIsLocked() const {
+    return isLocked;
+}
+
+void Note::setIsLocked(bool isLocked) {
+    this->isLocked = isLocked;
+}

@@ -12,10 +12,14 @@ private:
 
 public:
     void addNote(const Note& note);
-    void deleteNoteByTitle(const std::string& title);
+    bool deleteNoteByTitle(const std::string& title);
     Note* findNoteByTitle(const std::string& title);
     std::vector<Note> searchNotesByContent(const std::string& content) const;
     std::vector<Note> getAllNotes() const;
+
+    std::vector<Note> getFavoriteNotes() const;
+    void setFavorite(const std::string& title, bool isFavorite);
+    void setLocked(const std::string& title, bool isLocked);
 };
 
 
