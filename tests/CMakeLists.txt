@@ -10,7 +10,9 @@ FetchContent_MakeAvailable(googletest)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 add_executable(runUnitTests test_note.cpp
-        test_note_manager.cpp)
-target_link_libraries(runUnitTests gtest gtest_main pthread Note)
+        test_note_manager.cpp
+        test_collections.cpp
+        ../src/Collection.cpp  # Aggiungi Collection.cpp qui
+)
 
-add_test(NAME runUnitTests COMMAND runUnitTests)
+target_link_libraries(runUnitTests gtest gtest_main pthread Note)

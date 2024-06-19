@@ -5,10 +5,12 @@
 
 #include "Note.h"
 #include <vector>
+#include "Collection.h"
 
 class NoteManager {
 private:
     std::vector<Note> notes;
+    std::vector<Collection> collections;
 
 public:
     void addNote(const Note& note);
@@ -20,6 +22,9 @@ public:
     std::vector<Note> getFavoriteNotes() const;
     void setFavorite(const std::string& title, bool isFavorite);
     void setLocked(const std::string& title, bool isLocked);
+
+    void addCollection(const std::string& name);
+    Collection* findCollectionByName(const std::string& name);
 };
 
 

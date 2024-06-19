@@ -1,5 +1,5 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/maurizio/CLionProjects/Lab_Di_Programmazione -B /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug
-CMake Warning (dev) at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FetchContent.cmake:1282 (message):
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/maurizio/CLionProjects/Lab_Di_Programmazione -B /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug
+CMake Warning (dev) at /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FetchContent.cmake:1331 (message):
   The DOWNLOAD_EXTRACT_TIMESTAMP option was not given and policy CMP0135 is
   not set.  The policy's OLD behavior will be used.  When using a URL
   download, the timestamps of extracted files should preferably be that of
@@ -13,6 +13,30 @@ Call Stack (most recent call first):
   tests/CMakeLists.txt:4 (FetchContent_Declare)
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
--- Configuring done (0.2s)
+CMake Deprecation Warning at cmake-build-debug/_deps/googletest-src/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at cmake-build-debug/_deps/googletest-src/googlemock/CMakeLists.txt:45 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at cmake-build-debug/_deps/googletest-src/googletest/CMakeLists.txt:56 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Configuring done (0.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug

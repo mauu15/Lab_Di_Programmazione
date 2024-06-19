@@ -2,8 +2,10 @@
 
 #include <utility>
 
-Note::Note(std::string  title, std::string  content)
-        : title(std::move(title)), content(std::move(content)), isFavorite(false), isLocked(false) {}
+Note::Note(std::string title, std::string content)
+        : title(std::move(title)), content(std::move(content)), isFavorite(false), isLocked(false), collection(nullptr) {
+
+}
 
 
 std::string Note::getTitle() const {
@@ -38,3 +40,13 @@ bool Note::getIsLocked() const {
 void Note::setIsLocked(bool isLocked) {
     this->isLocked = isLocked;
 }
+
+Collection* Note::getCollection() const {
+    return collection;
+}
+
+void Note::setCollection(Collection* collection) {
+    this->collection = collection;
+}
+
+

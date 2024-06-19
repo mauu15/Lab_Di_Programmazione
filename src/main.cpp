@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Note.h"
 #include "NoteManager.h"
+#include "Collection.h"
 
 void printMenu() {
     std::cout << "=== Gestore di Note ===" << std::endl;
@@ -11,7 +12,10 @@ void printMenu() {
     std::cout << "5. Aggiungi/Rimuovi preferiti" << std::endl;
     std::cout << "6. Mostra note preferite" << std::endl;
     std::cout << "7. Blocca/Sblocca nota" << std::endl;
-    std::cout << "8. Esci" << std::endl;
+    std::cout << "8. Crea collezione" << std::endl;
+    std::cout << "9. Aggiungi nota a collezione" << std::endl;
+    std::cout << "10. Mostra collezioni" << std::endl;
+    std::cout << "11. Esci" << std::endl;
     std::cout << "=======================" << std::endl;
     std::cout << "Scelta: ";
 }
@@ -62,11 +66,12 @@ int main() {
                 std::cin.ignore(); // per evitare problemi con std::getline dopo std::cin
                 std::getline(std::cin, deleteTitle);
 
-                bool result = manager.deleteNoteByTitle(deleteTitle);
-                if (result) {
-                    std::cout << "Nota eliminata con successo." << std::endl;
+                Note* note = manager.findNoteByTitle(deleteTitle);
+                if (note && note->getIsLocked()) {
+                    std::cout << "La nota è bloccata e non può essere eliminata." << std::endl;
                 } else {
-                    std::cout << "Nota non trovata o è bloccata e non può essere eliminata." << std::endl;
+                    manager.deleteNoteByTitle(deleteTitle);
+                    std::cout << "Nota eliminata con successo." << std::endl;
                 }
                 break;
             }
@@ -93,7 +98,7 @@ int main() {
                 Note* note = manager.findNoteByTitle(title);
                 if (note) {
                     bool newFavoriteStatus = !note->getIsFavorite();
-                    manager.setFavorite(title, newFavoriteStatus);
+                    note->setIsFavorite(newFavoriteStatus);
                     std::cout << "Lo stato di preferito della nota è stato aggiornato a "
                               << (newFavoriteStatus ? "Sì" : "No") << "." << std::endl;
                 } else {
@@ -102,13 +107,17 @@ int main() {
                 break;
             }
             case 6: {
-                auto favorites = manager.getFavoriteNotes();
-                if (favorites.empty()) {
+                auto notes = manager.getAllNotes();
+                auto it = std::remove_if(notes.begin(), notes.end(), [](const Note& note) {
+                    return !note.getIsFavorite();
+                });
+
+                if (it == notes.begin()) {
                     std::cout << "Nessuna nota preferita presente." << std::endl;
                 } else {
                     std::cout << "Elenco delle note preferite:" << std::endl;
-                    for (const auto& note : favorites) {
-                        std::cout << "Titolo: " << note.getTitle() << ", Contenuto: " << note.getContent() << std::endl;
+                    for (auto i = notes.begin(); i != it; ++i) {
+                        std::cout << "Titolo: " << i->getTitle() << ", Contenuto: " << i->getContent() << std::endl;
                     }
                 }
                 break;
@@ -122,21 +131,75 @@ int main() {
                 Note* note = manager.findNoteByTitle(title);
                 if (note) {
                     bool newLockStatus = !note->getIsLocked();
-                    manager.setLocked(title, newLockStatus);
+                    note->setIsLocked(newLockStatus);
                     std::cout << "La nota è stata " << (newLockStatus ? "bloccata" : "sbloccata") << "." << std::endl;
                 } else {
                     std::cout << "Nota non trovata." << std::endl;
                 }
                 break;
             }
-            case 8:
+            case 8: {
+                std::string collectionName;
+                std::cout << "Inserisci il nome della nuova collezione: ";
+                std::cin.ignore();
+                std::getline(std::cin, collectionName);
+
+                manager.addCollection(collectionName);
+                std::cout << "Collezione '" << collectionName << "' creata con successo." << std::endl;
+                break;
+            }
+            case 9: {
+                std::string noteTitle, collectionName;
+                std::cout << "Inserisci il titolo della nota da aggiungere alla collezione: ";
+                std::cin.ignore();
+                std::getline(std::cin, noteTitle);
+                std::cout << "Inserisci il nome della collezione: ";
+                std::getline(std::cin, collectionName);
+
+                Note* note = manager.findNoteByTitle(noteTitle);
+                Collection* collection = manager.findCollectionByName(collectionName);
+
+                if (note && collection) {
+                    collection->addNote(note);
+                    note->setCollection(collection);
+                    std::cout << "Nota aggiunta alla collezione con successo." << std::endl;
+                } else {
+                    std::cout << "Nota o collezione non trovata." << std::endl;
+                }
+                break;
+            }
+            case 10: {
+                std::string collectionName;
+                std::cout << "Inserisci il nome della collezione da visualizzare: ";
+                std::cin.ignore();
+                std::getline(std::cin, collectionName);
+
+                Collection* collection = manager.findCollectionByName(collectionName);
+                if (collection) {
+                    auto notes = collection->getNotes();
+                    if (notes.empty()) {
+                        std::cout << "La collezione è vuota." << std::endl;
+                    } else {
+                        std::cout << "Note nella collezione '" << collection->getName() << "':" << std::endl;
+                        for (const auto& note : notes) {
+                            std::cout << "Titolo: " << note->getTitle() << ", Contenuto: " << note->getContent()
+                                      << ", Preferita: " << (note->getIsFavorite() ? "Sì" : "No")
+                                      << ", Bloccata: " << (note->getIsLocked() ? "Sì" : "No") << std::endl;
+                        }
+                    }
+                } else {
+                    std::cout << "Collezione non trovata." << std::endl;
+                }
+                break;
+            }
+            case 11:
                 std::cout << "Uscita dal programma..." << std::endl;
                 break;
             default:
                 std::cout << "Scelta non valida. Riprova." << std::endl;
                 break;
         }
-    } while (choice != 8);
+    } while (choice != 11);
 
     return 0;
 }

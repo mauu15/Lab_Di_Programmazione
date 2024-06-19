@@ -4,12 +4,15 @@
 
 #include <string>
 
+class Collection;
+
 class Note {
 private:
     std::string title;
     std::string content;
-    bool isFavorite;
-    bool isLocked;
+    bool isFavorite{};
+    bool isLocked{};
+    Collection* collection{};
 
 public:
 
@@ -26,6 +29,9 @@ public:
 
     bool getIsLocked() const;
     void setIsLocked(bool isLocked);
+
+    Collection *getCollection() const;
+    void setCollection(Collection* collection);
 };
 
 #endif //LAB_DI_PROGRAMMAZIONE_NOTE_H

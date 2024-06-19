@@ -1,22 +1,28 @@
 #include "NoteManager.h"
-#include <algorithm>
+#include "Collection.h"
+
 
 void NoteManager::addNote(const Note& note) {
     notes.push_back(note);
+    if (note.getCollection() != nullptr) {
+        note.getCollection()->addNote(&notes.back());
+    }
 }
 
-bool NoteManager::deleteNoteByTitle(const std::string &title) {
-    for (auto it = notes.begin(); it != notes.end(); ++it) {
-        if (it->getTitle() == title) {
-            if (it->getIsLocked()) {
-                return false; // Non cancella la nota se è bloccata
-            }
-            notes.erase(it);
-            return true;
+bool NoteManager::deleteNoteByTitle(const std::string& title) {
+    auto it = std::find_if(notes.begin(), notes.end(), [&title](const Note& note) {
+        return note.getTitle() == title && !note.getIsLocked();
+    });
+    if (it != notes.end()) {
+        if (it->getCollection() != nullptr) {
+            it->getCollection()->removeNote(&(*it));
         }
+        notes.erase(it);
+        return true; // Return true if deletion was successful
     }
-    return false;
+    return false; // Return false if note with title was not found or was locked
 }
+
 
 Note* NoteManager::findNoteByTitle(const std::string& title) {
     for (auto& note : notes) {
@@ -63,4 +69,17 @@ void NoteManager::setLocked(const std::string& title, bool isLocked) {
     if (note) {
         note->setIsLocked(isLocked);
     }
+}
+
+void NoteManager::addCollection(const std::string& name) {
+    collections.emplace_back(name);
+}
+
+Collection* NoteManager::findCollectionByName(const std::string& name) {
+    for (auto& collection : collections) {
+        if (collection.getName() == name) {
+            return &collection;
+        }
+    }
+    return nullptr;
 }
