@@ -20,3 +20,7 @@ void Collection::removeNote(Note* note) {
 const std::vector<Note*>& Collection::getNotes() const {
     return notes;
 }
+
+int Collection::getNoteCount() const {
+    return notes.size();
+}

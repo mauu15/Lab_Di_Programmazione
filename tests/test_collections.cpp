@@ -1,7 +1,6 @@
 // test_collections.cpp
 #include "gtest/gtest.h"
 #include "../src/NoteManager.h"
-#include "../src/Collection.h"
 
 TEST(CollectionTest, AddNote) {
     NoteManager manager;
