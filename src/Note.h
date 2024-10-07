@@ -21,17 +21,17 @@ public:
     std::string getTitle() const;
     std::string getContent() const;
 
-    void setTitle(const std::string &title);
-    void setContent(const std::string &content);
+    void setTitle(const std::string &inTitle);
+    void setContent(const std::string &inContent);
 
     bool getIsFavorite() const;
-    void setIsFavorite(bool isFavorite);
+    void setIsFavorite(bool inIsFavorite);
 
     bool getIsLocked() const;
-    void setIsLocked(bool isLocked);
+    void setIsLocked(bool inIsLocked);
 
     Collection *getCollection() const;
-    void setCollection(Collection* collection);
+    void setCollection(Collection* inCollection);
 };
 
 #endif //LAB_DI_PROGRAMMAZIONE_NOTE_H

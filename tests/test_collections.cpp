@@ -1,29 +1,31 @@
-// test_collections.cpp
 #include "gtest/gtest.h"
 #include "../src/NoteManager.h"
+#include "../src/NoteCountObserver.h"
 
 TEST(CollectionTest, AddNote) {
     NoteManager manager;
     manager.addCollection("Work");
 
-    Note note1("Meeting", "Discuss project status");
-    manager.addNote(note1);
-
+    NoteCountObserver observer;
     Collection* collection = manager.findCollectionByName("Work");
     ASSERT_NE(collection, nullptr);
+    collection->addObserver(&observer);
 
+    Note note1("Meeting", "Discussione sul progetto");
+    manager.addNote(note1);
     collection->addNote(&note1);
+
     ASSERT_EQ(collection->getNotes().size(), 1);
     EXPECT_EQ(collection->getNotes()[0]->getTitle(), "Meeting");
 }
 
 TEST(CollectionTest, FindCollectionByName) {
     NoteManager manager;
-    manager.addCollection("Personal");
+    manager.addCollection("Personale");
 
-    Collection* collection = manager.findCollectionByName("Personal");
+    Collection* collection = manager.findCollectionByName("Personale");
     ASSERT_NE(collection, nullptr);
-    EXPECT_EQ(collection->getName(), "Personal");
+    EXPECT_EQ(collection->getName(), "Personale");
 
     Collection* nonExistentCollection = manager.findCollectionByName("NonExistent");
     EXPECT_EQ(nonExistentCollection, nullptr);
@@ -33,13 +35,15 @@ TEST(CollectionTest, AddMultipleNotes) {
     NoteManager manager;
     manager.addCollection("Projects");
 
-    Note note1("Project A", "Details about project A");
-    Note note2("Project B", "Details about project B");
-    manager.addNote(note1);
-    manager.addNote(note2);
-
+    NoteCountObserver observer;
     Collection* collection = manager.findCollectionByName("Projects");
     ASSERT_NE(collection, nullptr);
+    collection->addObserver(&observer);
+
+    Note note1("Project A", "Dettagli sul progetto A");
+    Note note2("Project B", "Dettagli sul progetto B");
+    manager.addNote(note1);
+    manager.addNote(note2);
 
     collection->addNote(&note1);
     collection->addNote(&note2);
@@ -54,14 +58,18 @@ TEST(CollectionTest, AddNoteToMultipleCollections) {
     manager.addCollection("Work");
     manager.addCollection("Personal");
 
-    Note note1("Task", "Complete the report");
-    manager.addNote(note1);
-
+    NoteCountObserver observer;
     Collection* workCollection = manager.findCollectionByName("Work");
     Collection* personalCollection = manager.findCollectionByName("Personal");
 
     ASSERT_NE(workCollection, nullptr);
     ASSERT_NE(personalCollection, nullptr);
+
+    workCollection->addObserver(&observer);
+    personalCollection->addObserver(&observer);
+
+    Note note1("Task", "Completa il report");
+    manager.addNote(note1);
 
     workCollection->addNote(&note1);
     personalCollection->addNote(&note1);

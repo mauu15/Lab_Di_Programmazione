@@ -16,12 +16,12 @@ std::string Note::getContent() const {
     return content;
 }
 
-void Note::setTitle(const std::string &title) {
-    this->title = title;
+void Note::setTitle(const std::string &inTitle) {
+    this->title = inTitle;
 }
 
-void Note::setContent(const std::string &content) {
-    this->content = content;
+void Note::setContent(const std::string &inContent) {
+    this->content = inContent;
 }
 
 
@@ -29,24 +29,24 @@ bool Note::getIsFavorite() const {
     return isFavorite;
 }
 
-void Note::setIsFavorite(bool isFavorite) {
-    this->isFavorite = isFavorite;
+void Note::setIsFavorite(bool inIsFavorite) {
+    this->isFavorite = inIsFavorite;
 }
 
 bool Note::getIsLocked() const {
     return isLocked;
 }
 
-void Note::setIsLocked(bool isLocked) {
-    this->isLocked = isLocked;
+void Note::setIsLocked(bool inIsLocked) {
+    this->isLocked = inIsLocked;
 }
 
 Collection* Note::getCollection() const {
     return collection;
 }
 
-void Note::setCollection(Collection* collection) {
-    this->collection = collection;
+void Note::setCollection(Collection* inCollection) {
+    this->collection = inCollection;
 }
 
 

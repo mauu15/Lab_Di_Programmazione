@@ -121,19 +121,19 @@ build cmake_object_order_depends_target_Note: phony || src/CMakeFiles/Note.dir
 
 build src/CMakeFiles/Note.dir/Note.cpp.o: CXX_COMPILER__Note_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/src/Note.cpp || cmake_object_order_depends_target_Note
   DEP_FILE = src/CMakeFiles/Note.dir/Note.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics
   OBJECT_DIR = src/CMakeFiles/Note.dir
   OBJECT_FILE_DIR = src/CMakeFiles/Note.dir
 
 build src/CMakeFiles/Note.dir/NoteManager.cpp.o: CXX_COMPILER__Note_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/src/NoteManager.cpp || cmake_object_order_depends_target_Note
   DEP_FILE = src/CMakeFiles/Note.dir/NoteManager.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics
   OBJECT_DIR = src/CMakeFiles/Note.dir
   OBJECT_FILE_DIR = src/CMakeFiles/Note.dir
 
 build src/CMakeFiles/Note.dir/Collection.cpp.o: CXX_COMPILER__Note_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/src/Collection.cpp || cmake_object_order_depends_target_Note
   DEP_FILE = src/CMakeFiles/Note.dir/Collection.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics
   OBJECT_DIR = src/CMakeFiles/Note.dir
   OBJECT_FILE_DIR = src/CMakeFiles/Note.dir
 
@@ -146,7 +146,7 @@ build src/CMakeFiles/Note.dir/Collection.cpp.o: CXX_COMPILER__Note_unscanned_Deb
 # Link the static library src/libNote.a
 
 build src/libNote.a: CXX_STATIC_LIBRARY_LINKER__Note_Debug src/CMakeFiles/Note.dir/Note.cpp.o src/CMakeFiles/Note.dir/NoteManager.cpp.o src/CMakeFiles/Note.dir/Collection.cpp.o
-  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = src/CMakeFiles/Note.dir
   POST_BUILD = :
@@ -165,19 +165,19 @@ build cmake_object_order_depends_target_Lab_Di_Programmazione: phony || cmake_ob
 
 build src/CMakeFiles/Lab_Di_Programmazione.dir/main.cpp.o: CXX_COMPILER__Lab_Di_Programmazione_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/src/main.cpp || cmake_object_order_depends_target_Lab_Di_Programmazione
   DEP_FILE = src/CMakeFiles/Lab_Di_Programmazione.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics
   OBJECT_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
   OBJECT_FILE_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
 
 build src/CMakeFiles/Lab_Di_Programmazione.dir/NoteManager.cpp.o: CXX_COMPILER__Lab_Di_Programmazione_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/src/NoteManager.cpp || cmake_object_order_depends_target_Lab_Di_Programmazione
   DEP_FILE = src/CMakeFiles/Lab_Di_Programmazione.dir/NoteManager.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics
   OBJECT_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
   OBJECT_FILE_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
 
 build src/CMakeFiles/Lab_Di_Programmazione.dir/Collection.cpp.o: CXX_COMPILER__Lab_Di_Programmazione_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/src/Collection.cpp || cmake_object_order_depends_target_Lab_Di_Programmazione
   DEP_FILE = src/CMakeFiles/Lab_Di_Programmazione.dir/Collection.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics
   OBJECT_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
   OBJECT_FILE_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
 
@@ -190,7 +190,7 @@ build src/CMakeFiles/Lab_Di_Programmazione.dir/Collection.cpp.o: CXX_COMPILER__L
 # Link the executable src/Lab_Di_Programmazione
 
 build src/Lab_Di_Programmazione: CXX_EXECUTABLE_LINKER__Lab_Di_Programmazione_Debug src/CMakeFiles/Lab_Di_Programmazione.dir/main.cpp.o src/CMakeFiles/Lab_Di_Programmazione.dir/NoteManager.cpp.o src/CMakeFiles/Lab_Di_Programmazione.dir/Collection.cpp.o | src/libNote.a || src/libNote.a
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7
   LINK_LIBRARIES = src/libNote.a
   OBJECT_DIR = src/CMakeFiles/Lab_Di_Programmazione.dir
   POST_BUILD = :
@@ -279,28 +279,28 @@ build cmake_object_order_depends_target_runUnitTests: phony || cmake_object_orde
 
 build tests/CMakeFiles/runUnitTests.dir/test_note.cpp.o: CXX_COMPILER__runUnitTests_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/tests/test_note.cpp || cmake_object_order_depends_target_runUnitTests
   DEP_FILE = tests/CMakeFiles/runUnitTests.dir/test_note.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics
   INCLUDES = -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = tests/CMakeFiles/runUnitTests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/runUnitTests.dir
 
 build tests/CMakeFiles/runUnitTests.dir/test_note_manager.cpp.o: CXX_COMPILER__runUnitTests_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/tests/test_note_manager.cpp || cmake_object_order_depends_target_runUnitTests
   DEP_FILE = tests/CMakeFiles/runUnitTests.dir/test_note_manager.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics
   INCLUDES = -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = tests/CMakeFiles/runUnitTests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/runUnitTests.dir
 
 build tests/CMakeFiles/runUnitTests.dir/test_collections.cpp.o: CXX_COMPILER__runUnitTests_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/tests/test_collections.cpp || cmake_object_order_depends_target_runUnitTests
   DEP_FILE = tests/CMakeFiles/runUnitTests.dir/test_collections.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics
   INCLUDES = -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = tests/CMakeFiles/runUnitTests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/runUnitTests.dir
 
 build tests/CMakeFiles/runUnitTests.dir/__/src/Collection.cpp.o: CXX_COMPILER__runUnitTests_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/src/Collection.cpp || cmake_object_order_depends_target_runUnitTests
   DEP_FILE = tests/CMakeFiles/runUnitTests.dir/__/src/Collection.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics
   INCLUDES = -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = tests/CMakeFiles/runUnitTests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/runUnitTests.dir/__/src
@@ -314,7 +314,7 @@ build tests/CMakeFiles/runUnitTests.dir/__/src/Collection.cpp.o: CXX_COMPILER__r
 # Link the executable tests/runUnitTests
 
 build tests/runUnitTests: CXX_EXECUTABLE_LINKER__runUnitTests_Debug tests/CMakeFiles/runUnitTests.dir/test_note.cpp.o tests/CMakeFiles/runUnitTests.dir/test_note_manager.cpp.o tests/CMakeFiles/runUnitTests.dir/test_collections.cpp.o tests/CMakeFiles/runUnitTests.dir/__/src/Collection.cpp.o | lib/libgtestd.a lib/libgtest_maind.a src/libNote.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a src/libNote.a
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7
   LINK_LIBRARIES = lib/libgtestd.a  lib/libgtest_maind.a  -lpthread  src/libNote.a  lib/libgtestd.a
   OBJECT_DIR = tests/CMakeFiles/runUnitTests.dir
   POST_BUILD = :
@@ -473,7 +473,7 @@ build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depen
 
 build _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
   DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
-  FLAGS = -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
+  FLAGS = -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
   INCLUDES = -I/Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googlemock/include -I/Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googlemock -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
   OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src
@@ -487,7 +487,7 @@ build _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o:
 # Link the static library lib/libgmockd.a
 
 build lib/libgmockd.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o || lib/libgtestd.a
-  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
   POST_BUILD = :
@@ -506,7 +506,7 @@ build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_
 
 build _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
   DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
-  FLAGS = -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
+  FLAGS = -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
   INCLUDES = -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googlemock/include -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googlemock -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
   OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src
@@ -520,7 +520,7 @@ build _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main
 # Link the static library lib/libgmock_maind.a
 
 build lib/libgmock_maind.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o || lib/libgmockd.a lib/libgtestd.a
-  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
   POST_BUILD = :
@@ -609,7 +609,7 @@ build cmake_object_order_depends_target_gtest: phony || _deps/googletest-build/g
 
 build _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
   DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
-  FLAGS = -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
+  FLAGS = -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
   INCLUDES = -I/Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest/include -I/Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir
   OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src
@@ -623,7 +623,7 @@ build _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o:
 # Link the static library lib/libgtestd.a
 
 build lib/libgtestd.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
-  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir
   POST_BUILD = :
@@ -642,7 +642,7 @@ build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_
 
 build _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_unscanned_Debug /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
   DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
-  FLAGS = -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
+  FLAGS = -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
   INCLUDES = -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/maurizio/CLionProjects/Lab_Di_Programmazione/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
   OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src
@@ -656,7 +656,7 @@ build _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main
 # Link the static library lib/libgtest_maind.a
 
 build lib/libgtest_maind.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o || lib/libgtestd.a
-  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.7
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
   POST_BUILD = :

@@ -2,6 +2,7 @@
 #include "Note.h"
 #include "NoteManager.h"
 #include "Collection.h"
+#include "NoteCountObserver.h"
 
 void printMenu() {
     std::cout << "=== Gestore di Note ===" << std::endl;
@@ -22,6 +23,7 @@ void printMenu() {
 
 int main() {
     NoteManager manager;
+    NoteCountObserver observer;
 
     int choice;
     do {
@@ -32,7 +34,7 @@ int main() {
             case 1: {
                 std::string title, content;
                 std::cout << "Inserisci il titolo della nota: ";
-                std::cin.ignore(); // per evitare problemi con std::getline dopo std::cin
+                std::cin.ignore();
                 std::getline(std::cin, title);
                 std::cout << "Inserisci il contenuto della nota: ";
                 std::getline(std::cin, content);
@@ -45,7 +47,7 @@ int main() {
             case 2: {
                 std::string searchTitle;
                 std::cout << "Inserisci il titolo da cercare: ";
-                std::cin.ignore(); // per evitare problemi con std::getline dopo std::cin
+                std::cin.ignore();
                 std::getline(std::cin, searchTitle);
 
                 Note* foundNote = manager.findNoteByTitle(searchTitle);
@@ -63,7 +65,7 @@ int main() {
             case 3: {
                 std::string deleteTitle;
                 std::cout << "Inserisci il titolo da eliminare: ";
-                std::cin.ignore(); // per evitare problemi con std::getline dopo std::cin
+                std::cin.ignore();
                 std::getline(std::cin, deleteTitle);
 
                 Note* note = manager.findNoteByTitle(deleteTitle);
@@ -145,6 +147,10 @@ int main() {
                 std::getline(std::cin, collectionName);
 
                 manager.addCollection(collectionName);
+                Collection* collection = manager.findCollectionByName(collectionName);
+                if (collection) {
+                    collection->addObserver(&observer);
+                }
                 std::cout << "Collezione '" << collectionName << "' creata con successo." << std::endl;
                 break;
             }

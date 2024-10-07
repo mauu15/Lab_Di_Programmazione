@@ -18,16 +18,16 @@ bool NoteManager::deleteNoteByTitle(const std::string& title) {
             it->getCollection()->removeNote(&(*it));
         }
         notes.erase(it);
-        return true; // Return true if deletion was successful
+        return true; // ritorna true se la nota è stata cancellata
     }
-    return false; // Return false if note with title was not found or was locked
+    return false; // ritorna false se la nota non è stata cancellata
 }
 
 
 Note* NoteManager::findNoteByTitle(const std::string& title) {
     for (auto& note : notes) {
         if (note.getTitle() == title) {
-            return &note;
+            return &note; // ritorna il puntatore alla nota se la trova
         }
     }
     return nullptr;
@@ -37,7 +37,7 @@ std::vector<Note> NoteManager::searchNotesByContent(const std::string& content) 
     std::vector<Note> results;
     for (const auto& note : notes) {
         if (note.getContent().find(content) != std::string::npos) {
-            results.push_back(note);
+            results.push_back(note); // aggiunge la nota ai risultati se trova il contenuto
         }
     }
     return results;
@@ -51,7 +51,7 @@ std::vector<Note> NoteManager::getFavoriteNotes() const {
     std::vector<Note> favorites;
     for (const auto& note : notes) {
         if (note.getIsFavorite()) {
-            favorites.push_back(note);
+            favorites.push_back(note); // aggiunge la nota ai preferiti se è contrassegnata come tale
         }
     }
     return favorites;
@@ -60,14 +60,14 @@ std::vector<Note> NoteManager::getFavoriteNotes() const {
 void NoteManager::setFavorite(const std::string& title, bool isFavorite) {
     Note* note = findNoteByTitle(title);
     if (note) {
-        note->setIsFavorite(isFavorite);
+        note->setIsFavorite(isFavorite); // imposta la nota come preferita o no
     }
 }
 
 void NoteManager::setLocked(const std::string& title, bool isLocked) {
     Note* note = findNoteByTitle(title);
     if (note) {
-        note->setIsLocked(isLocked);
+        note->setIsLocked(isLocked); // blocca o sblocca la nota
     }
 }
 
@@ -78,7 +78,7 @@ void NoteManager::addCollection(const std::string& name) {
 Collection* NoteManager::findCollectionByName(const std::string& name) {
     for (auto& collection : collections) {
         if (collection.getName() == name) {
-            return &collection;
+            return &collection; // ritorna il puntatore alla collezione se la trova
         }
     }
     return nullptr;

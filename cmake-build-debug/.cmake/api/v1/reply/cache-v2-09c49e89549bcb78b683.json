@@ -755,7 +755,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/anaconda3/bin/install_name_tool"
+			"value" : "/usr/bin/install_name_tool"
 		},
 		{
 			"name" : "CMAKE_INSTALL_OLDINCLUDEDIR",
@@ -1039,7 +1039,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : ""
+			"value" : "14.7"
 		},
 		{
 			"name" : "CMAKE_OSX_SYSROOT",
@@ -1051,7 +1051,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",

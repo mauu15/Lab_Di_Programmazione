@@ -4,5 +4,7 @@ add_executable(Lab_Di_Programmazione main.cpp
         NoteManager.cpp
         NoteManager.h
         Collection.cpp
-        Collection.h)
+        Collection.h
+        Observer.h
+        NoteCountObserver.h)
 target_link_libraries(Lab_Di_Programmazione Note)
