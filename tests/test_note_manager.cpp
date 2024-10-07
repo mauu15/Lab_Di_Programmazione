@@ -7,9 +7,9 @@ TEST(NoteManagerTest, AddNote) {
     Note note("Titolo", "Contenuto");
     manager.addNote(note);
 
-    ASSERT_EQ(manager.getAllNotes().size(), 1);
-    EXPECT_EQ(manager.getAllNotes()[0].getTitle(), "Titolo");
-    EXPECT_EQ(manager.getAllNotes()[0].getContent(), "Contenuto");
+    ASSERT_EQ(manager.getAllNotes().size(), 1); // Verifica che la nota sia stata aggiunta correttamente.
+    EXPECT_EQ(manager.getAllNotes()[0].getTitle(), "Titolo"); // Verifica che il titolo della nota sia corretto.
+    EXPECT_EQ(manager.getAllNotes()[0].getContent(), "Contenuto"); // Verifica che il contenuto della nota sia corretto.
 }
 
 TEST(NoteManagerTest, DeleteLockedNote) {
@@ -19,10 +19,10 @@ TEST(NoteManagerTest, DeleteLockedNote) {
     manager.setLocked("Titolo1", true);
 
     bool result = manager.deleteNoteByTitle("Titolo1");
-    EXPECT_FALSE(result);
+    EXPECT_FALSE(result); // Verifica che la nota non sia stata eliminata.
 
     Note* foundNote = manager.findNoteByTitle("Titolo1");
-    EXPECT_NE(foundNote, nullptr);
+    EXPECT_NE(foundNote, nullptr); // Verifica che la nota esista ancora.
 }
 
 TEST(NoteManagerTest, FindNoteByTitle) {
@@ -33,9 +33,9 @@ TEST(NoteManagerTest, FindNoteByTitle) {
     manager.addNote(note2);
 
     Note* foundNote = manager.findNoteByTitle("Titolo1");
-    ASSERT_NE(foundNote, nullptr);
-    EXPECT_EQ(foundNote->getTitle(), "Titolo1");
-    EXPECT_EQ(foundNote->getContent(), "Contenuto1");
+    ASSERT_NE(foundNote, nullptr); // Verifica che la nota sia stata trovata.
+    EXPECT_EQ(foundNote->getTitle(), "Titolo1"); // Verifica che il titolo della nota sia corretto.
+    EXPECT_EQ(foundNote->getContent(), "Contenuto1"); // Verifica che il contenuto della nota sia corretto.
 }
 
 TEST(NoteManagerTest, SearchNotesByContent) {
@@ -46,7 +46,7 @@ TEST(NoteManagerTest, SearchNotesByContent) {
     manager.addNote(note2);
 
     auto results = manager.searchNotesByContent("contenuto");
-    ASSERT_EQ(results.size(), 2);
+    ASSERT_EQ(results.size(), 2); // Verifica che siano state trovate due note.
 }
 
 TEST(NoteManagerTest, AddFavoriteNote) {
@@ -60,8 +60,8 @@ TEST(NoteManagerTest, AddFavoriteNote) {
     manager.setFavorite("Test1", true);
     auto favorites = manager.getFavoriteNotes();
 
-    ASSERT_EQ(favorites.size(), 1);
-    EXPECT_EQ(favorites[0].getTitle(), "Test1");
+    ASSERT_EQ(favorites.size(), 1); // Verifica che sia stata aggiunta una nota ai preferiti.
+    EXPECT_EQ(favorites[0].getTitle(), "Test1"); // Verifica che il titolo della nota sia corretto.
 }
 
 TEST(NoteManagerTest, LockNote) {
@@ -74,11 +74,11 @@ TEST(NoteManagerTest, LockNote) {
     manager.deleteNoteByTitle("Test1");
     auto notes = manager.getAllNotes();
 
-    ASSERT_EQ(notes.size(), 1);
+    ASSERT_EQ(notes.size(), 1); // Verifica che la nota non sia stata eliminata.
 
     manager.setLocked("Test1", false);
     manager.deleteNoteByTitle("Test1");
     notes = manager.getAllNotes();
 
-    ASSERT_EQ(notes.size(), 0);
+    ASSERT_EQ(notes.size(), 0); // Verifica che la nota sia stata eliminata.
 }
